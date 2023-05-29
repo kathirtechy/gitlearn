@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js">  
+ </script>  
+ <script type="text/javascript">
+
+ 	$(function(){
+ 		$("#single").change(function(){
+ 			var tt=$("#single").val();
+ 			$("p").html(tt);
+ 		})
+ 		$("#multiple").change(function(){
+ 			console.log('q----------',$("#multiple").val())
+ 			var ttt=$("#multiple").val().join('');
+ 			$("#sdadasdsa").html(ttt);
+ 		})
+ 	})
+
+ </script>
+</head>
+<body>
+
+<select id="single">    
+  <option>Single</option>    
+  <option>Double</option>    
+ <option>Triple</option>    
+</select>  
+
+<select id="multiple" multiple="multiple">  
+  <option selected="selected">Multiple</option>  
+  <option>Multiple2</option>  
+  <option>Multiple3</option>  
+</select>  
+
+<p>This is another <b>paragraph</b>.</p> 
+<p id="sdadasdsa">This is another <b>paragraph</b>.</p>   
+</body>
+</html>
